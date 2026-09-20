@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071322">
+  <meta name="description" content="Faedi Loulidi is a postdoctoral researcher at OIST working in quantum information theory and entanglement theory.">
+  <title>Faedi Loulidi — Quantum Information Research</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23006fac'/%3E%3Cpath d='M14 44V20h21M14 32h18M42 20v24h11' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='square'/%3E%3C/svg%3E">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+    :root{color-scheme:light;--ink:#15334b;--muted:#526b7d;--line:#d5e4ed;--blue:#006fac;--sky:#eaf7ff;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f8fbfd;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:16px;line-height:1.65}
+    a{color:var(--blue);text-underline-offset:3px}
+    a:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+    ::selection{background:#b6e6ff;color:var(--ink)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{line-height:1.17}
+    h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+    .shell{width:min(100% - 64px,1060px);margin-inline:auto}
+    .skip{position:absolute;top:-60px;left:20px;background:var(--blue);color:#fff;padding:8px 14px;z-index:5}
+    .skip:focus{top:12px}
+    header{background:#fff;border-bottom:1px solid var(--line)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:1.13rem;font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+    .brand b{color:var(--blue)}
+    nav{display:flex;align-items:center;gap:22px}
+    nav a{font-size:.88rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+    nav a:hover{color:var(--blue)}
+    .hero{background:var(--sky);border-bottom:1px solid var(--line)}
+    .hero-inner{display:grid;grid-template-columns:minmax(0,1fr) 270px;align-items:center;gap:80px;padding-block:75px}
+    .eyebrow,.section-kicker{color:var(--blue);font-weight:700;letter-spacing:.095em;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(3.3rem,6vw,5.4rem);letter-spacing:-.06em;line-height:1.02;margin:18px 0 26px}
+    h1 span{color:var(--blue)}
+    .lead{max-width:590px;font-size:1.3rem;line-height:1.55;color:#294c63;margin-bottom:30px}
+    .links{display:flex;flex-wrap:wrap;gap:12px}
+    .button{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--blue);background:var(--blue);color:#fff;padding:10px 17px;font-size:.91rem;font-weight:700;text-decoration:none;border-radius:4px}
+    .button:hover{background:#035b8d}
+    .button.secondary{background:#fff;color:var(--blue)}
+    .button.secondary:hover{background:#eff9ff}
+    .arrow{font-size:1.1rem}
+    .hero-side{margin:0}
+    .hero-side img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;box-shadow:0 14px 32px #14507024}
+    .hero-side .small{margin:17px 0 1px;color:var(--blue);font-size:.79rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+    .hero-side p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.5}
+    .art-band{height:165px;background:#0a2540 url('quantum-art.webp') center 48%/cover no-repeat}
+    .section{background:#fff;padding:80px 0;border-bottom:1px solid var(--line)}
+    .section:nth-of-type(even){background:#f8fbfd}
+    .section-head{display:grid;grid-template-columns:165px 1fr;gap:35px;align-items:start;margin-bottom:30px}
+    .section-kicker{padding-top:8px}
+    h2{font-size:clamp(2.15rem,4vw,3.2rem);letter-spacing:-.04em;margin:0}
+    .intro-grid{display:grid;grid-template-columns:165px minmax(0,1fr);gap:35px}
+    .intro-grid p{max-width:740px;color:#38576b;font-size:1.08rem;margin-bottom:18px}
+    .intro-grid p:last-child{margin:0}
+    .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .research{padding:23px 0;border-top:2px solid #9bd9f5}
+    .number{color:var(--blue);font-size:.8rem;font-weight:700}
+    .research h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.45rem;letter-spacing:-.025em;margin:13px 0 0}
+    .paper-group{font-size:1rem;font-weight:700;color:var(--blue);margin:32px 0 10px}
+    .paper-group:first-of-type{margin-top:0}
+    .papers{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+    .paper{display:grid;grid-template-columns:95px minmax(0,1fr) 135px;gap:19px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+    .year{color:var(--blue);font-size:.82rem;font-weight:700;padding-top:4px}
+    .paper-title{color:var(--ink);font-weight:700;line-height:1.4;font-size:1.03rem;text-decoration:none}
+    .paper-title:is(a):hover{color:var(--blue);text-decoration:underline}
+    .authors{color:var(--muted);font-size:.9rem;line-height:1.55;margin:6px 0 0}
+    .paper-link{font-size:.82rem;font-weight:700;text-decoration:none;text-align:right;padding-top:3px}
+    .paper-link:hover{text-decoration:underline}
+    .note{font-size:.85rem;color:var(--muted);margin:21px 0 0}
+    .talk-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+    .talk-list li{display:grid;grid-template-columns:125px 1fr;gap:24px;padding:17px 0;border-bottom:1px solid var(--line)}
+    .talk-list li>span,.mentoring article>span{color:var(--blue);font-size:.84rem;font-weight:700}
+    .talk-list strong{font-size:1rem;line-height:1.4}
+    .talk-list p,.mentoring p{margin:3px 0 0;color:var(--muted);font-size:.91rem}
+    .video-link{display:inline-block;font-size:.88rem;font-weight:700;text-decoration:none;margin-top:7px}
+    .video-link:hover{text-decoration:underline}
+    .mentoring{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .mentoring article{border-top:2px solid #9bd9f5;padding:23px 0}
+    .mentoring h3{font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;font-weight:400;margin:13px 0 0}
+    .contact{background:#dff2fc}
+    .contact-inner{display:flex;justify-content:space-between;align-items:end;gap:40px;padding-block:69px}
+    .contact h2{margin:12px 0 15px}
+    .contact p{max-width:650px;color:#37576b;font-size:1.04rem;margin:0}
+    .contact .button{white-space:nowrap}
+    footer{background:#fff;border-top:1px solid var(--line)}
+    .foot{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.84rem;padding-block:23px}
+    @media(max-width:850px){.shell{width:min(100% - 40px,1060px)}.hero-inner{gap:35px;grid-template-columns:minmax(0,1fr) 210px}.section-head,.intro-grid{grid-template-columns:125px 1fr;gap:24px}nav{gap:13px}.research-grid,.mentoring{gap:15px}}
+    @media(max-width:650px){.nav{padding-block:16px;display:block}nav{margin-top:9px;overflow-x:auto;padding-bottom:4px}.hero-inner{grid-template-columns:1fr;gap:28px;padding-block:45px}.hero-side{grid-row:1}.hero-side img{width:150px}.hero-side .small{margin-top:12px}h1{font-size:3.35rem;margin-block:19px}.lead{font-size:1.12rem}.art-band{height:120px}.section{padding:59px 0}.section-head,.intro-grid{display:block}.section-head{margin-bottom:22px}.section-kicker{padding:0;margin-bottom:9px}.research-grid,.mentoring{grid-template-columns:1fr}.research{padding:16px 0}.paper{grid-template-columns:1fr;gap:4px}.paper-link{text-align:left;padding:0}.talk-list li{grid-template-columns:1fr;gap:4px}.contact-inner{align-items:flex-start;flex-direction:column;padding-block:55px}.foot{flex-direction:column;gap:3px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="shell nav"><a class="brand" href="#top">Faedi <b>Loulidi</b></a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#publications">Papers</a><a href="#talks">Talks</a><a href="#mentoring">Mentoring</a><a href="#contact">Contact</a></nav></div></header>
+  <main id="main">
+    <section class="hero" id="top"><div class="shell hero-inner"><div><div class="eyebrow">Quantum information theory · Okinawa, Japan</div><h1>Faedi <span>Loulidi.</span></h1><p class="lead">I am a postdoctoral researcher at OIST working in quantum information theory and entanglement theory.</p><div class="links"><a class="button" href="#research">Explore my research <span class="arrow" aria-hidden="true">↗</span></a><a class="button secondary" href="#publications">All papers <span class="arrow" aria-hidden="true">↗</span></a></div></div><aside class="hero-side"><img src="faedi-loulidi.jpg" alt="Portrait of Faedi Loulidi" width="373" height="372"><div class="small">Postdoctoral researcher</div><p><a href="https://www.oist.jp/research/research-units/netq" target="_blank" rel="noopener noreferrer">Networked Quantum Devices Unit</a><br>Okinawa Institute of Science and Technology</p></aside></div></section>
+    <div class="art-band" role="img" aria-label="Abstract artistic image inspired by quantum entanglement and networks"></div>
+    <section class="section" id="about"><div class="shell"><div class="section-head"><div class="section-kicker">01 / About</div><h2>Research interests</h2></div><div class="intro-grid"><div></div><div><p>I am interested in the foundations of quantum theory and entanglement, and in their applications to mathematical physics, quantum computing, and quantum algorithms.</p><p>My research journey began with a PhD under the supervision of <a href="https://ion.nechita.net/" target="_blank" rel="noopener noreferrer">Dr. Ion Nechita</a>, where I worked on quantum measurement compatibility and Bell nonlocality. I then joined <a href="https://www.oist.jp/research/research-units/netq" target="_blank" rel="noopener noreferrer">David Elkouss’s group at OIST</a> to work on computational entanglement theory and its applications.</p><p>More broadly, I enjoy exploring problems in mathematical physics and quantum information that may lead to new applications and have a wider impact.</p></div></div></div></section>
+    <section class="section" id="research"><div class="shell"><div class="section-head"><div class="section-kicker">02 / Research</div><h2>Research areas</h2></div><div class="research-grid"><article class="research"><div class="number">01</div><h3>Computational entanglement</h3></article><article class="research"><div class="number">02</div><h3>Quantum foundations</h3></article><article class="research"><div class="number">03</div><h3>Random tensor networks</h3></article></div></div></section>
+    <section class="section" id="publications"><div class="shell"><div class="section-head"><div class="section-kicker">03 / Publications</div><h2>Papers &amp; ongoing work</h2></div>
+      <h3 class="paper-group">Ongoing and submitted</h3><ol class="papers">
+        <li class="paper"><span class="year">Ongoing</span><div><span class="paper-title">k-shot generalization of computational entanglement distillation</span><p class="authors">Ilia Ryzov, Faedi Loulidi, David Elkouss</p></div></li>
+        <li class="paper"><span class="year">Submitted</span><div><span class="paper-title">Efficient Entanglement Manipulation Cookbook: From Mixing to a Computational Second Law</span><p class="authors">Ilia Ryzov, Faedi Loulidi, David Elkouss · Submitted to Communications in Mathematical Physics</p></div></li>
+        <li class="paper"><span class="year">Submitted</span><div><span class="paper-title">Computational Cryptography from Pseudoentanglement</span><p class="authors">Ilia Ryzov, Manuel Goulao, Faedi Loulidi, David Elkouss · Submitted to QCrypt</p></div></li>
+        <li class="paper"><span class="year">Submitted</span><div><a class="paper-title" href="https://arxiv.org/abs/2509.21988" target="_blank" rel="noopener noreferrer">Properties of computational entanglement measures</a><p class="authors">Ilia Ryzov, Faedi Loulidi, David Elkouss</p></div><a class="paper-link" href="https://arxiv.org/abs/2509.21988" target="_blank" rel="noopener noreferrer">Preprint ↗</a></li>
+      </ol>
+      <h3 class="paper-group">Published</h3><ol class="papers">
+        <li class="paper"><span class="year">Published</span><div><a class="paper-title" href="https://ieeexplore.ieee.org/document/10628227/" target="_blank" rel="noopener noreferrer">A general purification protocol with imperfect state preparation</a><p class="authors">Golshan Lirabi, Faedi Loulidi, David Elkouss · International Conference on Quantum Communications, Networking, and Computing</p></div><a class="paper-link" href="https://ieeexplore.ieee.org/document/10628227/" target="_blank" rel="noopener noreferrer">Published paper ↗</a></li>
+        <li class="paper"><span class="year">Published</span><div><a class="paper-title" href="https://www.mdpi.com/1099-4300/27/7/756" target="_blank" rel="noopener noreferrer">A Max-Flow approach to Random Tensor Networks</a><p class="authors">Khurshed Fitter, Faedi Loulidi, Ion Nechita · Entropy</p></div><a class="paper-link" href="https://www.mdpi.com/1099-4300/27/7/756" target="_blank" rel="noopener noreferrer">Published paper ↗</a></li>
+        <li class="paper"><span class="year">Published</span><div><a class="paper-title" href="https://doi.org/10.1088/1751-8121/adcf63" target="_blank" rel="noopener noreferrer">A physical noise model for quantum measurements</a><p class="authors">Faedi Loulidi, Ion Nechita, Clément Pellegrini · Journal of Physics A</p></div><a class="paper-link" href="https://doi.org/10.1088/1751-8121/adcf63" target="_blank" rel="noopener noreferrer">Published paper ↗</a></li>
+        <li class="paper"><span class="year">Published</span><div><a class="paper-title" href="https://link.aps.org/doi/10.1103/PRXQuantum.3.040325" target="_blank" rel="noopener noreferrer">Measurement incompatibility vs. Bell non-locality: an approach via tensor norms</a><p class="authors">Faedi Loulidi, Ion Nechita · PRX Quantum</p></div><a class="paper-link" href="https://link.aps.org/doi/10.1103/PRXQuantum.3.040325" target="_blank" rel="noopener noreferrer">Published paper ↗</a></li>
+        <li class="paper"><span class="year">Published</span><div><a class="paper-title" href="https://doi.org/10.1063/5.0028658" target="_blank" rel="noopener noreferrer">The compatibility dimension of quantum measurements</a><p class="authors">Faedi Loulidi, Ion Nechita · Journal of Mathematical Physics</p></div><a class="paper-link" href="https://doi.org/10.1063/5.0028658" target="_blank" rel="noopener noreferrer">Published paper ↗</a></li>
+      </ol><p class="note">Status follows the CV provided in September 2026.</p></div></section>
+    <section class="section" id="talks"><div class="shell"><div class="section-head"><div class="section-kicker">04 / Talks</div><h2>Selected talks</h2></div><ol class="talk-list">
+      <li><span>Jul 2024</span><div><strong>A Max-Flow approach to Random Tensor Networks</strong><p>International Congress on Mathematical Physics (ICMP)</p></div></li>
+      <li><span>Jul 2024</span><div><strong>A Max-Flow approach to Random Tensor Networks</strong><p>Centre International de Rencontres Mathématiques (CIRM)</p><a class="video-link" href="https://www.youtube.com/watch?v=7Q8EEAYmJCQ" target="_blank" rel="noopener noreferrer">Watch the CIRM talk ↗</a></div></li>
+      <li><span>Jan 2024</span><div><strong>Quantum Information Theory and Free Probability: Random Tensor Networks</strong><p>New York University Abu Dhabi · Invited lecture</p></div></li>
+      <li><span>Jun 2023</span><div><strong>Compatibility and nonlocality</strong><p>OIST seminar, Okinawa</p></div></li>
+      <li><span>Nov 2022</span><div><strong>Measurement incompatibility vs. Bell non-locality</strong><p>Berlin Quantum Seminar</p></div></li>
+      <li><span>Oct 2022</span><div><strong>Measurement incompatibility vs. Bell non-locality: an approach via tensor norms</strong><p>Tensor Networks workshop, Vienna</p></div></li>
+    </ol></div></section>
+    <section class="section" id="mentoring"><div class="shell"><div class="section-head"><div class="section-kicker">05 / Mentoring</div><h2>Student supervision</h2></div><div class="mentoring">
+      <article><span>2024–present · PhD student</span><h3>Ilia Ryzov</h3><p>Computational entanglement theory · OIST</p></article>
+      <article><span>2024 · Research intern</span><h3>Golshan Lirabi</h3><p>Purification protocols · OIST</p></article>
+      <article><span>2024 · Rotation student</span><h3>Jin Kozaki</h3><p>Quantum complexity and random matrices · OIST</p></article>
+    </div></div></section>
+    <section class="contact" id="contact"><div class="shell contact-inner"><div><div class="section-kicker">06 / Contact</div><h2>Let’s talk quantum information.</h2><p>If you would like to discuss a topic related to quantum information, please feel free to reach out at <a href="mailto:faedi-loulidi@oist.jp">faedi-loulidi@oist.jp</a>.</p></div><a class="button" href="https://orcid.org/0000-0003-0819-0251" target="_blank" rel="noopener noreferrer">ORCID profile <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer><div class="shell foot"><span>© 2026 Faedi Loulidi</span><span>Quantum information theory · Okinawa, Japan</span></div></footer>
+</body>
+</html>
